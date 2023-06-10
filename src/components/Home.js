@@ -3,7 +3,7 @@ import { styled } from "styled-components";
 import { Link } from "react-router-dom";
 
 //import images
-import placeholder from "../images/placeholder.jpg";
+import GradPhoto from "../images/GradPhoto.jpg";
 
 const Home = () => {
   return (
@@ -24,7 +24,7 @@ const Home = () => {
         </StyledButton>
       </StyledDescription>
       <StyledPortrait>
-        <img src={placeholder} alt="Self Portrait" />
+        <img src={GradPhoto} alt="Self Portrait" />
       </StyledPortrait>
     </StyledHome>
   );
@@ -42,6 +42,7 @@ const StyledHome = styled.div`
 const StyledDescription = styled.div`
   flex: 1;
   padding-right: 5rem;
+  padding-left: 5rem;
   h2 {
     font-size: 2.5rem;
     font-weight: bolder;
@@ -71,16 +72,22 @@ const StyledPortrait = styled.div`
 
 const StyledButton = styled.button`
   flex: 1;
-  background: #eb7979;
-  border-style: none;
+  border-color: #eb7979;
+  border-style: solid light;
+  background-color: #212121;
   margin-top: 1.75rem;
-  margin-left: 1rem;
   border-radius: 0.75rem;
   padding: 0.4rem 0.75rem;
   font-size: 1.25rem;
   #MyProjects {
     text-decoration: none;
-    color: black;
+    color: #858585;
+  }
+  &:hover {
+    background: #eb7979;
+    #MyProjects {
+      color: black;
+    }
   }
 `;
 
