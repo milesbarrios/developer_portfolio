@@ -1,5 +1,6 @@
 import React from "react";
 import { styled } from "styled-components";
+import { Link } from "react-router-dom";
 
 //import images
 import placeholder from "../images/placeholder.jpg";
@@ -16,6 +17,11 @@ const Home = () => {
           testing, embedded systems, and web development. I prefer to develop
           using Javascript but have experience with many different languages.
         </p>
+        <StyledButton>
+          <Link id="MyProjects" to="/Projects">
+            My Projects
+          </Link>
+        </StyledButton>
       </StyledDescription>
       <StyledPortrait>
         <img src={placeholder} alt="Self Portrait" />
@@ -37,26 +43,44 @@ const StyledDescription = styled.div`
   flex: 1;
   padding-right: 5rem;
   h2 {
+    font-size: 2.5rem;
     font-weight: bolder;
     padding-bottom: 1.25rem;
-    /* color: #ffffff; */
-    color: black;
+    color: #ffffff;
+    /* color: #212121; */
   }
   p {
+    font-size: 1.25rem;
     font-weight: lighter;
-    /* color: #858585; */
-    color: black;
+    color: #858585;
+    /* color: #212121; */
   }
 `;
 
 const StyledPortrait = styled.div`
   flex: 1;
+  padding-left: 10rem;
   padding-right: 5rem;
   overflow: hidden;
   img {
-    width: 100%;
-    height: 80vh;
+    width: 70%;
+    height: 50vh;
     object-fit: cover;
+  }
+`;
+
+const StyledButton = styled.button`
+  flex: 1;
+  background: #eb7979;
+  border-style: none;
+  margin-top: 1.75rem;
+  margin-left: 1rem;
+  border-radius: 0.75rem;
+  padding: 0.4rem 0.75rem;
+  font-size: 1.25rem;
+  #MyProjects {
+    text-decoration: none;
+    color: black;
   }
 `;
 

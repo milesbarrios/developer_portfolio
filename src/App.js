@@ -6,12 +6,17 @@ import GlobalStyle from "./components/GlobalStyle";
 
 //import components
 import Home from "./components/Home";
+import Nav from "./components/Nav";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <>
       <GlobalStyle />
-      <Home />
+      <Nav />
+      <Routes>
+        <Route path="/" exact element={<Home />} />
+      </Routes>
     </>
   );
 }
