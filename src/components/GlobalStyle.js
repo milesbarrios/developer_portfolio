@@ -10,6 +10,7 @@ const GlobalStyle = createGlobalStyle`
     body{
         background: #212121;
         font-family: 'Inter', sans-serif;
+        min-height: 100vh;
     }
 
     h1{

@@ -7,23 +7,23 @@ const Nav = () => {
     <StyledNav>
       <h1>
         <Link className="logo" id="logo" to="/">
-          Miles Barrios
+          MB
         </Link>
       </h1>
       <ul>
-        <li>
-          <Link className="link" to="/Projects">
-            Projects
-          </Link>
-        </li>
         <li>
           <Link className="link" to="/About">
             About
           </Link>
         </li>
         <li>
-          <Link className="link" to="/Contact">
-            Contact
+          <Link className="link" to="/Projects">
+            Projects
+          </Link>
+        </li>
+        <li>
+          <Link className="link" to="/Resume">
+            Resume
           </Link>
         </li>
       </ul>
@@ -62,9 +62,10 @@ const StyledNav = styled.nav`
   }
 
   .link {
+    display: flex;
     color: white;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.35rem;
     font-weight: lighter;
     background: linear-gradient(currentColor, currentColor) bottom / 0 0.1em
       no-repeat;

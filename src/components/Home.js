@@ -13,25 +13,31 @@ const Home = () => {
           What's Up, I'm <span>Miles</span>
         </h2>
         <p>
-          I am a developer based out of Arizona. I have experience in automation
-          testing, embedded systems, and web development. I prefer to develop
-          using Javascript but have experience with many different languages.
+          I am a developer based out of Arizona. I have experience in Web
+          Development, Test Automation, and Embedded Systems. My preferred
+          languages are Javascript and Python, however I have 2+ years of
+          experience writing in C.
         </p>
         <StyledButton>
           <Link id="MyProjects" to="/Projects">
             My Projects
           </Link>
         </StyledButton>
+        <StyledButton>
+          <Link id="MyResume" to="/Resume">
+            My Resume
+          </Link>
+        </StyledButton>
       </StyledDescription>
-      <StyledPortrait>
+      {/* <StyledPortrait>
         <img src={GradPhoto} alt="Self Portrait" />
-      </StyledPortrait>
+      </StyledPortrait> */}
     </StyledHome>
   );
 };
 
 const StyledHome = styled.div`
-  min-height: 90vh;
+  min-height: 83.5vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -48,25 +54,14 @@ const StyledDescription = styled.div`
     font-weight: bolder;
     padding-bottom: 1.25rem;
     color: #ffffff;
-    /* color: #212121; */
+    span {
+      color: #eb7979;
+    }
   }
   p {
     font-size: 1.25rem;
     font-weight: lighter;
     color: #858585;
-    /* color: #212121; */
-  }
-`;
-
-const StyledPortrait = styled.div`
-  flex: 1;
-  padding-left: 10rem;
-  padding-right: 5rem;
-  overflow: hidden;
-  img {
-    width: 70%;
-    height: 50vh;
-    object-fit: cover;
   }
 `;
 
@@ -79,13 +74,22 @@ const StyledButton = styled.button`
   border-radius: 0.75rem;
   padding: 0.4rem 0.75rem;
   font-size: 1.25rem;
+  margin-right: 2rem;
   #MyProjects {
     text-decoration: none;
     color: #858585;
   }
+  #MyResume {
+    text-decoration: none;
+    color: #858585;
+  }
+
   &:hover {
     background: #eb7979;
     #MyProjects {
+      color: black;
+    }
+    #MyResume {
       color: black;
     }
   }

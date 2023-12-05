@@ -1,0 +1,58 @@
+{
+  "College": {
+    "NCSM": {
+      "type": "public",
+      "title": "New College Social Media",
+      "created": "2020",
+      "lastSubmit": "",
+      "lang": ["Dart", "Flutter"],
+      "tech": [],
+      "desc": "NCSM is an app being developed by a group of students at NAU. NCSM is a multipurpose app that is meant to bring students on campus together. This app will improve the college experience for students that struggle to connect with others.",
+      "githubLink": "https://github.com/milesbarrios/NCSM"
+    },
+    "OSS": {
+      "type": "private",
+      "title": "Operating System Simulator",
+      "created": "2020",
+      "lastSubmit": "",
+      "desc": "Operating System Simulator project that was completed over the course of a semester. Consists of 4 parts that continue to implement different schedules and features of an operating system.",
+      "lang": ["C"],
+      "tech": [],
+      "githubLink": "https://github.com/milesbarrios/CS480"
+    },
+    "Ceres": {
+      "type": "public",
+      "title": "Ceres",
+      "created": "2020-2021",
+      "lastSubmit": "",
+      "desc": "Full stack web application that provides NAU researchers with a GUI to view asteroid observations from the Zwicky Transient Facility.",
+      "lang": ["ReactJS", "HTML", "CSS", "C#", "SQL"],
+      "tech": ["Single Page Application", "API", "Databases"],
+      "githubLink": "https://github.com/TeamCeres"
+    }
+  },
+  "Tutorial": {
+    "CP": {
+      "type": "public",
+      "title": "Capture Portfolio",
+      "created": "2023",
+      "lastSubmit": "06/10/2023",
+      "desc": "Tutorial I followed that was created by DevByEd to help learn ReactJS and other web development skils",
+      "lang": ["ReactJS"],
+      "tech": [],
+      "githubLink": "https://github.com/milesbarrios/capture-portfolio"
+    }
+  },
+  "Personal": {
+    "TPR": {
+      "type": "public",
+      "title": "The Potted Roots",
+      "created": "2023",
+      "lastSubmit": "06/08/2023",
+      "desc": "Plant Shop website created for a local business I am looking to start that sells rare and unique indoor house plants.",
+      "lang": ["ReactJS"],
+      "tech": [],
+      "githubLink": "https://github.com/milesbarrios/the-potted-roots"
+    }
+  }
+}
