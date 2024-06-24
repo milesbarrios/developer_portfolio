@@ -22,6 +22,7 @@ const Projects = () => {
           projectData={ProjectData[category]}
         />
       ))}
+      <div className="blankSpace" />
     </>
   );
 };

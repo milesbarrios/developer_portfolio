@@ -11,11 +11,22 @@ const GlobalStyle = createGlobalStyle`
         background: #212121;
         font-family: 'Inter', sans-serif;
         min-height: 100vh;
+        overflow-y: scroll;
+
+        
     }
+
+    body::-webkit-scrollbar{
+            display: none;
+        }
 
     h1{
         color: white;
         font-size: large;
+    }
+
+    .blankSpace{
+        min-height: 10vh;
     }
 `;
 

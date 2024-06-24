@@ -1,7 +1,7 @@
 {
   "College": {
     "NCSM": {
-      "type": "public",
+      "type": "Public",
       "title": "New College Social Media",
       "created": "2020",
       "lastSubmit": "",
@@ -11,7 +11,7 @@
       "githubLink": "https://github.com/milesbarrios/NCSM"
     },
     "OSS": {
-      "type": "private",
+      "type": "Private",
       "title": "Operating System Simulator",
       "created": "2020",
       "lastSubmit": "",
@@ -21,7 +21,7 @@
       "githubLink": "https://github.com/milesbarrios/CS480"
     },
     "Ceres": {
-      "type": "public",
+      "type": "Public",
       "title": "Ceres",
       "created": "2020-2021",
       "lastSubmit": "",
@@ -33,7 +33,7 @@
   },
   "Tutorial": {
     "CP": {
-      "type": "public",
+      "type": "Public",
       "title": "Capture Portfolio",
       "created": "2023",
       "lastSubmit": "06/10/2023",
@@ -45,13 +45,13 @@
   },
   "Personal": {
     "TPR": {
-      "type": "public",
+      "type": "Public",
       "title": "The Potted Roots",
       "created": "2023",
       "lastSubmit": "06/08/2023",
       "desc": "Plant Shop website created for a local business I am looking to start that sells rare and unique indoor house plants.",
       "lang": ["ReactJS"],
-      "tech": [],
+      "tech": ["Single Page Application", "Design"],
       "githubLink": "https://github.com/milesbarrios/the-potted-roots"
     }
   }

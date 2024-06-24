@@ -61,6 +61,7 @@ export const StyledFooter = styled.footer`
   height: 60px;
   width: 100%;
   bottom: 0;
+  position: fixed;
 
   .linkContainer {
     display: flex;
