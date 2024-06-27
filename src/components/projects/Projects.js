@@ -12,9 +12,6 @@ const Projects = () => {
   let categories = Object.keys(ProjectData);
   return (
     <>
-      <ProjectPageTitle>
-        <h1 className="projectPageTitle">Projects</h1>
-      </ProjectPageTitle>
       {categories.map((category) => (
         <Section
           key={category}

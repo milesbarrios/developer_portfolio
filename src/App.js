@@ -1,11 +1,12 @@
-//imports
+// Imports
 import React from "react";
 import { Routes, Route } from "react-router-dom";
+import styled from "styled-components";
 
-//global style
+// Global style
 import GlobalStyle from "./components/GlobalStyle";
 
-//components
+// Components
 import Home from "./components/Home";
 import About from "./components/About";
 import Projects from "./components/projects/Projects";
@@ -20,16 +21,38 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <Nav />
-      <Routes>
-        <Route path="/" exact element={<Home />} />
-        <Route path="/About" element={<About />} />
-        <Route path="/Projects" element={<Projects />} />
-        <Route path="/Resume" element={<Resume />} />
-      </Routes>
-      <Footer />
+      <AppContainer>
+        <Nav />
+        <Content>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/resume" element={<Resume />} />
+            <Route path="*" element={<NotFound />} /> {/* 404 Route */}
+          </Routes>
+        </Content>
+        <Footer />
+      </AppContainer>
     </>
   );
 }
+
+const NotFound = () => {
+  return <h2>404: Page Not Found</h2>;
+};
+
+const AppContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+`;
+
+const Content = styled.main`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-top: 10vh; /* Ensure content starts below the fixed Nav */
+`;
 
 export default App;

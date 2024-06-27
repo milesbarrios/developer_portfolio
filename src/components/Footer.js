@@ -1,17 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-
-// Components
 import { Link } from "react-router-dom";
-
-//import icons
-import github from "../images/32/github32.ico";
-import email from "../images/32/mail32.ico";
-import linkedin from "../images/32/linked32.ico";
+import { FaGithub, FaEnvelope, FaLinkedin } from "react-icons/fa"; // Example: FontAwesome icons
 
 const Footer = () => {
   const emailAddress = "contact@milesbarrios.dev";
   const MailToLink = `mailto:${emailAddress}`;
+
   return (
     <StyledFooter>
       <div className="linkContainer">
@@ -23,7 +18,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src={email} alt="" />
+              <FaEnvelope />
             </Link>
           </li>
           <li>
@@ -33,7 +28,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src={linkedin} alt="" />
+              <FaLinkedin />
             </Link>
           </li>
           <li>
@@ -43,7 +38,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src={github} alt="" />
+              <FaGithub />
             </Link>
           </li>
         </ul>
@@ -52,7 +47,7 @@ const Footer = () => {
   );
 };
 
-export const StyledFooter = styled.footer`
+const StyledFooter = styled.footer`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,8 +55,9 @@ export const StyledFooter = styled.footer`
   color: #fff;
   height: 60px;
   width: 100%;
-  bottom: 0;
   position: fixed;
+  bottom: 0;
+  z-index: 100;
 
   .linkContainer {
     display: flex;
@@ -76,28 +72,20 @@ export const StyledFooter = styled.footer`
     display: flex;
     color: white;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     font-weight: lighter;
+    margin: 0 10px; /* Adjust as needed */
+    transition: color 0.3s;
+
     &:hover {
       color: #eb7979;
-      background-size: 50% 0.1em;
-      background-position: bottom;
-    }
-    img {
-      height: auto;
-      flex: 1;
-      width: 2rem;
     }
   }
+
   ul {
     display: flex;
     list-style: none;
-    align-items: baseline;
-  }
-
-  li {
-    padding-left: 2.5rem;
-    position: relative;
+    align-items: center;
   }
 `;
 

@@ -1,11 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+import AboutMe from "./about/AboutMe";
 
-// Import Components
-import { ProjectPageTitle } from "./projects/Projects";
 import {
-  SectionContainer,
-  SectionTitleContainer,
   SectionLeftLine,
   SectionTitle,
   SectionRightLine,
@@ -14,31 +11,32 @@ import {
 const About = () => {
   return (
     <>
-      <ProjectPageTitle>
-        <h1 className="projectPageTitle">About</h1>
-      </ProjectPageTitle>
       <SectionContainer>
         <SectionTitleContainer>
           <SectionLeftLine />
-          <SectionTitle> About Me</SectionTitle>
+          <SectionTitle>About Me</SectionTitle>
           <SectionRightLine />
         </SectionTitleContainer>
-        <styledAboutSection>
-          <p>Hello</p>
-        </styledAboutSection>
+        <AboutMeContainer>
+          <AboutMe />
+        </AboutMeContainer>
       </SectionContainer>
-
       <div className="blankSpace" />
     </>
   );
 };
 
-export const styledAboutSection = styled.div`
-  h3 {
-    color: white;
-    font-size: 2rem;
-    font-weight: 10px;
-  }
+const SectionContainer = styled.div``;
+
+const SectionTitleContainer = styled.div`
+  display: flex;
+  align-items: center;
+  margin-top: 0rem;
+  margin-bottom: 20px;
+`;
+
+const AboutMeContainer = styled.div`
+  max-width: 800px;
 `;
 
 export default About;

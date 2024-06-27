@@ -1,14 +1,14 @@
 {
   "College": {
-    "NCSM": {
+    "Ceres": {
       "type": "Public",
-      "title": "New College Social Media",
-      "created": "2020",
+      "title": "Ceres",
+      "created": "2020-2021",
       "lastSubmit": "",
-      "lang": ["Dart", "Flutter"],
-      "tech": [],
-      "desc": "NCSM is an app being developed by a group of students at NAU. NCSM is a multipurpose app that is meant to bring students on campus together. This app will improve the college experience for students that struggle to connect with others.",
-      "githubLink": "https://github.com/milesbarrios/NCSM"
+      "desc": "Full stack web application that provides NAU researchers with a GUI to view asteroid observations from the Zwicky Transient Facility.",
+      "lang": ["ReactJS", "HTML", "CSS", "C#", "SQL"],
+      "tech": ["Single Page Application", "API", "Databases"],
+      "githubLink": "https://github.com/TeamCeres"
     },
     "OSS": {
       "type": "Private",
@@ -20,15 +20,15 @@
       "tech": [],
       "githubLink": "https://github.com/milesbarrios/CS480"
     },
-    "Ceres": {
+    "NCSM": {
       "type": "Public",
-      "title": "Ceres",
-      "created": "2020-2021",
+      "title": "New College Social Media",
+      "created": "2020",
       "lastSubmit": "",
-      "desc": "Full stack web application that provides NAU researchers with a GUI to view asteroid observations from the Zwicky Transient Facility.",
-      "lang": ["ReactJS", "HTML", "CSS", "C#", "SQL"],
-      "tech": ["Single Page Application", "API", "Databases"],
-      "githubLink": "https://github.com/TeamCeres"
+      "lang": ["Dart", "Flutter"],
+      "tech": [],
+      "desc": "NCSM is an app being developed by a group of students at NAU. NCSM is a multipurpose app that is meant to bring students on campus together. This app will improve the college experience for students that struggle to connect with others.",
+      "githubLink": "https://github.com/milesbarrios/NCSM"
     }
   },
   "Tutorial": {
