@@ -6,12 +6,17 @@ import ProjectList from "../projects/ProjectList";
 
 const Section = ({ category, projectData }) => {
   let projects = Object.keys(projectData);
+
+  // Determine the section title based on the category
+  const sectionTitle =
+    category === "Orgs" ? "Organizations" : `${category} Projects`;
+
   return (
     <>
       <SectionContainer>
         <SectionTitleContainer>
           <SectionLeftLine />
-          <SectionTitle>{category} Projects</SectionTitle>
+          <SectionTitle>{sectionTitle}</SectionTitle>
           <SectionRightLine />
         </SectionTitleContainer>
       </SectionContainer>

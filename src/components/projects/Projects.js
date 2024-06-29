@@ -1,39 +1,53 @@
-// Imports
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-
-// Components
-
-// Data
-import ProjectData from "../../json-data/projects_info.json";
+import fetchGitHubProjects from "./FetchProjDetails";
 import Section from "../sections/Section";
 
 const Projects = () => {
-  let categories = Object.keys(ProjectData);
+  const [projectsData, setProjectsData] = useState({ projects: [], orgs: [] });
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await fetchGitHubProjects();
+      setProjectsData(data);
+    };
+
+    fetchData();
+  }, []);
+
+  const { projects, orgs } = projectsData;
+
   return (
-    <>
-      {categories.map((category) => (
-        <Section
-          key={category}
-          category={category}
-          projectData={ProjectData[category]}
-        />
-      ))}
+    <ProjectsContainer>
+      <ProjectPageTitle>
+        <div className="projectPageTitle">Projects</div>
+      </ProjectPageTitle>
+      {Array.isArray(projects) && projects.length > 0 && (
+        <>
+          <Section
+            category="Public"
+            projectData={projects.filter((proj) => proj.type === "Public")}
+          />
+          <Section
+            category="Private"
+            projectData={projects.filter((proj) => proj.type === "Private")}
+          />
+        </>
+      )}
+      {Array.isArray(orgs) && orgs.length > 0 && (
+        <Section category="Orgs" projectData={orgs} />
+      )}
       <div className="blankSpace" />
-    </>
+    </ProjectsContainer>
   );
 };
 
+export const ProjectsContainer = styled.div`
+  /* Your styles here */
+`;
+
 export const ProjectPageTitle = styled.div`
-  display: flex;
-  height: 10vh;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 2rem;
-  .projectPageTitle {
-    display: flex;
-    font-size: 2.2rem;
-  }
+  /* Your styles here */
 `;
 
 export default Projects;

@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const notNone = (prop) => {
-  return prop && prop.length > 0; // Ensure prop is not undefined or empty
+  return prop && prop.length > 0;
 };
 
 const ProjectCard = ({ projectData }) => {
@@ -27,7 +27,7 @@ const ProjectCard = ({ projectData }) => {
           <span>Description</span>: {desc}
         </CardDetails>
       )}
-      {notNone(lang) && (
+      {Array.isArray(lang) && notNone(lang) && (
         <CardDetails>
           <span>Languages</span>: {lang.join(", ")}
         </CardDetails>
@@ -58,21 +58,21 @@ export const Card = styled.div`
   margin: 20px;
   width: 100%;
   max-width: 425px;
-  background-color: #f9f9f9;
+  background-color: #e4e1e1;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
-  position: relative; /* Ensure the card uses relative positioning */
-  z-index: 0; /* Start with a lower z-index to ensure cards are below other elements */
+  position: relative;
+  z-index: 0;
 
   &:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    z-index: 1; /* Increase z-index on hover to bring the card above other elements */
+    z-index: 1;
   }
 `;
 
 export const CardTitle = styled.h3`
-  color: #eb7979; /* Red color for card titles */
+  color: #eb7979;
   font-weight: bold;
   font-size: 1.75rem;
   margin-bottom: 0.5rem;
@@ -99,7 +99,7 @@ export const CardLink = styled.a`
 `;
 
 export const CardSectionLine = styled.div`
-  background-color: #ddd;
+  background-color: #414040;
   margin: 10px 0;
   height: 2px;
 `;
