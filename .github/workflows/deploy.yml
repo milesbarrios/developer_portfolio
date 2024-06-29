@@ -3,7 +3,7 @@ name: Deploy React App to GitHub Pages
 on:
   push:
     branches:
-      - main # Trigger deployment on push to main branch
+      - master # Trigger deployment on push to main branch
 
 jobs:
   build-and-deploy:
@@ -29,6 +29,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
+          publish_branch: deploy_branch
 
       - name: Verify Deployment
         run: echo "Deployed to GitHub Pages"
