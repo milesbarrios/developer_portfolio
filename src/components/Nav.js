@@ -53,7 +53,7 @@ const StyledNav = styled.nav`
     text-decoration: none;
     color: white;
     font-size: 2rem;
-    font-family: "Lobster", cursive;
+    font-family: "Times New Roman", Arial, Helvetica, sans-serif;
     font-weight: lighter;
     background: linear-gradient(currentColor, currentColor) bottom / 0 0em
       no-repeat;

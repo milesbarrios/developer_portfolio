@@ -1,7 +1,6 @@
 import axios from "axios";
 
 const GITHUB_TOKEN = process.env.REACT_APP_DEV_PORT_GITHUB_TOKEN;
-const GITHUB_USERNAME = process.env.REACT_APP_DEV_PORT_GITHUB_USERNAME;
 
 const fetchGitHubProjects = async () => {
   try {

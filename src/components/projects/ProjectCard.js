@@ -19,32 +19,33 @@ const ProjectCard = ({ projectData }) => {
       <CardSectionLine />
       {notNone(created) && (
         <CardDetails>
-          <span>Created</span>: {created}
+          <span>Created</span>: <p className="details">{created}</p>
         </CardDetails>
       )}
       {notNone(desc) && (
         <CardDetails>
-          <span>Description</span>: {desc}
+          <span>Description</span>: <p className="details">{desc}</p>
         </CardDetails>
       )}
       {Array.isArray(lang) && notNone(lang) && (
         <CardDetails>
-          <span>Languages</span>: {lang.join(", ")}
+          <span>Languages</span>: <p className="details">{lang.join(", ")}</p>
         </CardDetails>
       )}
       {notNone(tech) && (
         <CardDetails>
-          <span>Technologies</span>: {tech.join(", ")}
+          <span>Technologies</span>:{" "}
+          <p className="details">{tech.join(", ")}</p>
         </CardDetails>
       )}
       {notNone(type) && (
         <CardDetails>
-          <span>Type</span>: {type}
+          <span>Type</span>: <p className="details">{type}</p>
         </CardDetails>
       )}
       {notNone(lastSubmit) && (
         <CardDetails>
-          <span>Last Submit</span>: {lastSubmit}
+          <span>Last Submit</span>: <p className="details">{lastSubmit}</p>
         </CardDetails>
       )}
     </Card>
@@ -74,17 +75,21 @@ export const Card = styled.div`
 export const CardTitle = styled.h3`
   color: #eb7979;
   font-weight: bold;
+  font-family: "Times New Roman";
   font-size: 1.75rem;
   margin-bottom: 0.5rem;
 `;
 
-export const CardDetails = styled.p`
+export const CardDetails = styled.div`
   color: #555;
   margin-bottom: 0.5rem;
 
   span {
     font-weight: bold;
     color: #333;
+  }
+
+  .details {
   }
 `;
 

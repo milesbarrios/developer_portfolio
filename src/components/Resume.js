@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const ResumePath = require("../documents/Miles_Barrios_Resume.pdf");
+const ResumePath = require("../documents/Resume_Miles_Barrios.pdf");
 
 const Resume = () => {
   return (
