@@ -1,22 +1,28 @@
 import axios from "axios";
 
 const GITHUB_TOKEN = process.env.REACT_APP_DEV_PORT_GITHUB_TOKEN;
+const USERNAME = "milesbarrios";
 
 const fetchGitHubProjects = async () => {
   try {
-    // Fetch repositories
-    const reposResponse = await axios.get(`https://api.github.com/user/repos`, {
-      headers: {
-        Authorization: `Bearer ${GITHUB_TOKEN}`,
-      },
-    });
+    // Define headers conditionally
+    const headers = GITHUB_TOKEN
+      ? { Authorization: `Bearer ${GITHUB_TOKEN}` }
+      : {};
 
-    // Fetch organizations
-    const orgsResponse = await axios.get(`https://api.github.com/user/orgs`, {
-      headers: {
-        Authorization: `Bearer ${GITHUB_TOKEN}`,
-      },
-    });
+    // Fetch repositories
+    const reposUrl = GITHUB_TOKEN
+      ? "https://api.github.com/user/repos"
+      : `https://api.github.com/users/${USERNAME}/repos`;
+    const reposResponse = await axios.get(reposUrl, { headers });
+
+    // Fetch organizations (only if token is available)
+    let orgsResponse = { data: [] };
+    if (GITHUB_TOKEN) {
+      orgsResponse = await axios.get("https://api.github.com/user/orgs", {
+        headers,
+      });
+    }
 
     // Fetch detailed repository information including languages used
     const projectsPromises = reposResponse.data
@@ -33,9 +39,7 @@ const fetchGitHubProjects = async () => {
       .map(async (repo) => {
         try {
           const languagesResponse = await axios.get(repo.languages_url, {
-            headers: {
-              Authorization: `Bearer ${GITHUB_TOKEN}`,
-            },
+            headers,
           });
 
           const languagesUsed = Object.keys(languagesResponse.data);
@@ -71,9 +75,7 @@ const fetchGitHubProjects = async () => {
       return 1;
     });
 
-    console.log(orgsResponse);
-
-    // Map organizations
+    // Map organizations (if token is available)
     const orgs = orgsResponse.data.map((org) => ({
       title: org.login,
       desc: org.description,
