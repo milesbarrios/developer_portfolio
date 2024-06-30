@@ -33,4 +33,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.REACT_APP_DEV_PORTFOLIO }}
         run: |
-          npx gh-pages -d build -b deploy -r https://x-access-token:${{ secrets.REACT_APP_DEV_PORTFOLIO }}@github.com/${{ secrets.REACT_APP_USERNAME }}/developer_portfolio.git
+          npx gh-pages -d build -r https://x-access-token:${{ secrets.REACT_APP_DEV_PORTFOLIO }}@github.com/${{ secrets.REACT_APP_USERNAME }}/developer_portfolio.git
