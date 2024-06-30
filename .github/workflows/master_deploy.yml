@@ -29,8 +29,8 @@ jobs:
           git config --global user.email "${{ secrets.REACT_APP_EMAIL }}"
           git config --global user.name "${{ secrets.REACT_APP_USERNAME }}"
 
-      - name: Deploy to GH Pages
+      - name: Deploy to Deploy Branch
         env:
           GITHUB_TOKEN: ${{ secrets.REACT_APP_DEV_PORTFOLIO }}
         run: |
-          npx gh-pages -d build -r https://x-access-token:${{ secrets.REACT_APP_DEV_PORTFOLIO }}@github.com/${{ secrets.REACT_APP_USERNAME }}/developer_portfolio.git
+          npx gh-pages -d build -b deploy -r https://x-access-token:${{ secrets.REACT_APP_DEV_PORTFOLIO }}@github.com/${{ secrets.REACT_APP_USERNAME }}/developer_portfolio.git

@@ -10,7 +10,7 @@ const Home = () => {
     <StyledHome>
       <StyledDescription>
         <h2>
-          Hi, I'm <span>Mile</span>
+          Hi, I'm <span>Miles</span>
         </h2>
         <p>
           I am a developer based out of Arizona. I have experience in Web
