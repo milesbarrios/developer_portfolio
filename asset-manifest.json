@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.js": "/developer_portfolio/static/js/main.3dc2a180.js",
-    "static/js/787.d0fc6f61.chunk.js": "/developer_portfolio/static/js/787.d0fc6f61.chunk.js",
-    "static/media/GradPhoto.jpg": "/developer_portfolio/static/media/GradPhoto.ec47b9c03d76784049cd.jpg",
-    "static/media/Resume_Miles_Barrios.pdf": "/developer_portfolio/static/media/Resume_Miles_Barrios.bfef9017115692683255.pdf",
-    "index.html": "/developer_portfolio/index.html",
-    "main.3dc2a180.js.map": "/developer_portfolio/static/js/main.3dc2a180.js.map",
-    "787.d0fc6f61.chunk.js.map": "/developer_portfolio/static/js/787.d0fc6f61.chunk.js.map"
+    "main.js": "/milesbarrios.dev/static/js/main.b78bc789.js",
+    "static/js/787.d0fc6f61.chunk.js": "/milesbarrios.dev/static/js/787.d0fc6f61.chunk.js",
+    "static/media/GradPhoto.jpg": "/milesbarrios.dev/static/media/GradPhoto.ec47b9c03d76784049cd.jpg",
+    "static/media/Resume_Miles_Barrios.pdf": "/milesbarrios.dev/static/media/Resume_Miles_Barrios.bfef9017115692683255.pdf",
+    "index.html": "/milesbarrios.dev/index.html",
+    "main.b78bc789.js.map": "/milesbarrios.dev/static/js/main.b78bc789.js.map",
+    "787.d0fc6f61.chunk.js.map": "/milesbarrios.dev/static/js/787.d0fc6f61.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.3dc2a180.js"
+    "static/js/main.b78bc789.js"
   ]
 }
