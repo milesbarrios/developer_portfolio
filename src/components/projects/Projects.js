@@ -28,10 +28,12 @@ const Projects = () => {
             category="Public"
             projectData={projects.filter((proj) => proj.type === "Public")}
           />
-          <Section
-            category="Private"
-            projectData={projects.filter((proj) => proj.type === "Private")}
-          />
+          {Array.isArray(orgs) && orgs.length > 0 && (
+            <Section
+              category="Private"
+              projectData={projects.filter((proj) => proj.type === "Private")}
+            />
+          )}
         </>
       )}
       {Array.isArray(orgs) && orgs.length > 0 && (
