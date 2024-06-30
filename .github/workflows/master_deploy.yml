@@ -22,8 +22,6 @@ jobs:
         run: npm install
 
       - name: Build Project
-        env:
-          REACT_APP_DEV_PORT_GITHUB_TOKEN: ${{ secrets.REACT_APP_DEV_PORTFOLIO }}
         run: npm run build
 
       - name: Configure Git
