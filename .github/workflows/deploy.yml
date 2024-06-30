@@ -17,9 +17,16 @@ jobs:
           git config --global user.email "milesbarrios13@gmail.com"
           git config --global user.name "milesbarrios"
 
-      - name: Build and Deploy
+      - name: Build
         run: |
-          git checkout -b deploy-branch
           # Your build commands (e.g., npm run build)
-          git commit -am "Auto-deploy from master"
+          npm install
+          npm run build
+
+      - name: Deploy if changes exist
+        run: |
+          git fetch
+          git checkout deploy-branch
+          git reset --hard origin/deploy-branch
+          git merge --ff-only origin/master || echo "No changes to deploy"
           git push origin deploy-branch
