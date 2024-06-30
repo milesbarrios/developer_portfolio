@@ -1,39 +1,20 @@
-name: Deploy React App to GitHub Pages
+name: Deploy to deploy-branch
 
 on:
   push:
     branches:
-      - master # Trigger deployment on push to master branch
+      - master
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: "16"
-
-      # - name: Set environment variables
-      #   run: |
-      #     echo "REACT_APP_DEV_PORT_GITHUB_TOKEN=${{ secrets.REACT_APP_DEV_PORT_GITHUB_TOKEN }}" >> $GITHUB_ENV
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build project
-        run: npm run build
-
-      - name: Deploy to GitHub Pages
-        # uses: peaceiris/actions-gh-pages@v3
-        with:
-          # github_token: ${{ secrets.REACT_APP_DEV_PORT_GITHUB_TOKEN }}
-          publish_dir: ./build
-          publish_branch: deploy_branch
-
-      - name: Verify Deployment
-        run: echo "Deployed to GitHub Pages"
+      - name: Build and Deploy
+        run: |
+          git checkout -b deploy-branch
+          # Your build commands (e.g., npm run build)
+          git commit -am "Auto-deploy from master"
+          git push origin deploy-branch
