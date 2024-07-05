@@ -60,7 +60,7 @@ export const SectionRightLine = styled.div`
 
 export const SectionTitle = styled.h2`
   margin: 0 10px;
-  color: #eb7979;
+  color: #659359;
   font-size: 1.6rem;
   margin-top: 0.5rem;
 `;

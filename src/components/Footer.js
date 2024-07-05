@@ -78,7 +78,7 @@ const StyledFooter = styled.footer`
     transition: color 0.3s;
 
     &:hover {
-      color: #eb7979;
+      color: #659359;
     }
   }
 

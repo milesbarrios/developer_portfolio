@@ -73,7 +73,7 @@ export const Card = styled.div`
 `;
 
 export const CardTitle = styled.h3`
-  color: #eb7979;
+  color: #3d5a36;
   font-weight: bold;
   font-family: "Times New Roman";
   font-size: 1.75rem;
@@ -94,12 +94,12 @@ export const CardDetails = styled.div`
 `;
 
 export const CardLink = styled.a`
-  color: #9a4141;
+  color: #3d5a36;
   text-decoration: none;
   transition: color 0.3s;
 
   &:hover {
-    color: #eb7979;
+    color: #659359;
   }
 `;
 

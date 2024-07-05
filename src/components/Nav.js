@@ -60,7 +60,7 @@ const StyledNav = styled.nav`
     transition: 0.5s background-size;
 
     &:hover {
-      color: #eb7979;
+      color: #7eb970;
       background-size: 100% 0.1em;
       background-position: left bottom;
     }
@@ -75,7 +75,7 @@ const StyledNav = styled.nav`
     transition: 0.75s background-size;
 
     &:hover {
-      color: #eb7979;
+      color: #7eb970;
       background-size: 50% 0.1em;
       background-position: bottom;
     }
