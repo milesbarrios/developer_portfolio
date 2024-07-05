@@ -65,7 +65,7 @@ const StyledDescription = styled.div`
     padding-bottom: 1.25rem;
     color: #ffffff;
     span {
-      color: #eb7979;
+      color: #7eb970;
     }
   }
   p {
@@ -81,7 +81,7 @@ const StyledButtons = styled.div`
 `;
 
 const StyledButton = styled.button`
-  border: solid 1px #eb7979;
+  border: solid 1px #7eb970;
   background-color: #212121;
   margin: 1.75rem 0.5rem; /* Responsive margin */
   border-radius: 0.75rem;
@@ -91,7 +91,7 @@ const StyledButton = styled.button`
   transition: background-color 0.3s ease;
 
   &:hover {
-    background: #eb7979;
+    background: #7eb970;
     color: black;
   }
 
