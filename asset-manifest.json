@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.js": "/static/js/main.6344c353.js",
+    "main.js": "/static/js/main.4b438644.js",
     "static/js/787.d0fc6f61.chunk.js": "/static/js/787.d0fc6f61.chunk.js",
     "static/media/GradPhoto.jpg": "/static/media/GradPhoto.ec47b9c03d76784049cd.jpg",
     "static/media/Resume_Miles_Barrios.pdf": "/static/media/Resume_Miles_Barrios.bfef9017115692683255.pdf",
     "index.html": "/index.html",
-    "main.6344c353.js.map": "/static/js/main.6344c353.js.map",
+    "main.4b438644.js.map": "/static/js/main.4b438644.js.map",
     "787.d0fc6f61.chunk.js.map": "/static/js/787.d0fc6f61.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.6344c353.js"
+    "static/js/main.4b438644.js"
   ]
 }
