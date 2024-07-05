@@ -19,9 +19,6 @@ const Projects = () => {
 
   return (
     <ProjectsContainer>
-      <ProjectPageTitle>
-        <div className="projectPageTitle">Projects</div>
-      </ProjectPageTitle>
       {Array.isArray(projects) && projects.length > 0 && (
         <>
           <Section
